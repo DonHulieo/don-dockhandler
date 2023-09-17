@@ -17,7 +17,7 @@ An Implementation of the Native Dock Handler for FiveM
 
 ## Installation
 
-- Download the latest release from [here]()
+- Download the latest release from [here](https://github.com/DonHulieo/don-dockhandler/releases/tag/v1.0.2)
 - Extract the don-dockhandler folder to your resources folder
 - Add `ensure don-dockhandler` to your server.cfg
 - Edit the config.lua to your liking
