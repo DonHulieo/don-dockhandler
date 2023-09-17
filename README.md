@@ -15,6 +15,10 @@ An Implementation of the Native Dock Handler for FiveM
 - Pick Up and Drop Off Containers at the Docks w/ the Dock Handler
 - Optimised Code, running at 0.0ms at rest and peaking at 0.2ms when attaching a container
 
+## Notes
+
+- The Handler Natives only allow for the picking up and dropping of 'prop_contr_03b_ld', in future you'll be able to configure locations for these to spawn and *hopefully* allow for other containers to be picked up.
+
 ## Installation
 
 - Download the latest release from [here](https://github.com/DonHulieo/don-dockhandler/releases/tag/v1.0.2)
