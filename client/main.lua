@@ -53,7 +53,7 @@ local function handlerThread(veh)
     while inHandler do
       Wait(sleep)
       SetInputExclusive(0, Config.Key)
-      if veh == 0 or not DoesEntityExist(veh) or not IsVehicleDriveable(veh, false) or not IsPedInAnyVehicle(ped, false) or not IsVehicleModel(veh, `handler`) then
+      if veh == 0 or not DoesEntityExist(veh) or not IsVehicleDriveable(veh, false) or not IsVehicleModel(veh, `handler`) or not IsPedInAnyVehicle(ped, false) then
         inHandler = false
         return
       end
