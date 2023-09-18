@@ -13,7 +13,7 @@ An Implementation of the Native Dock Handler for FiveM
 ## Features
 
 - Pick Up and Drop Off Containers at the Docks w/ the Dock Handler
-- Optimised Code, running at 0.0ms at rest and peaking at 0.2ms when attaching a container
+- Optimised Code, running at 0.0ms at rest and peaking at 0.02ms when attaching a container
 
 ## Notes
 
