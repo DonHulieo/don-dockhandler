@@ -43,8 +43,8 @@ end
 ---@param vehicle number
 ---@return boolean
 local function isVehicleAHandler(vehicle)
-  if vehicle == 0 or not DoesEntityExist(vehicle) or not IsVehicleDriveable(vehicle, false) then return false end
   if not IsPedInAnyVehicle(PlayerPedId(), false) then return false end
+  if vehicle == 0 or not DoesEntityExist(vehicle) or not IsVehicleDriveable(vehicle, false) then return false end
   if not IsVehicleModel(vehicle, `handler`) then return false end
   return true
 end
@@ -86,6 +86,7 @@ local function handlerThread(vehicle)
     while inHandler do
       Wait(sleep)
       SetInputExclusive(0, Config.Key)
+      if not inHandler then return end
       if not isVehicleAHandler(vehicle) then
         inHandler = false
         return
@@ -102,12 +103,11 @@ local function handlerThread(vehicle)
               AttachContainerToHandlerFrame(vehicle, container)
               justAttached = true
               p:resolve()
-            else
-              p:reject()
             end
+            sleep = 1000
             Await(p)
           end
-        else 
+        else
           sleep = 1000
         end
       else
@@ -143,7 +143,7 @@ end)
 
 AddEventHandler('onResourceStop', function(name)
   if name ~= GetCurrentResourceName() then return end
-  inHandler = false
+  inHandler, listening = false, false
 end)
 
 RegisterCommand('containers', function()
