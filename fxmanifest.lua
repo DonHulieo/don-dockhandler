@@ -3,7 +3,7 @@ game 'gta5'
 
 description 'Don Dockhandler - A FiveM Implementation of the Native Dockhandler'
 
-version '1.0.2'
+version '1.0.3'
 
 shared_script 'config.lua'
 
